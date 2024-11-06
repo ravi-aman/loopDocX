@@ -74,7 +74,7 @@ function CreateWorkspace() {
                     </div>
                 </CoverPicker>
 
-                {/* Input Section  */}
+                {/* Input Sectionn  */}
                 <div className='p-12'>
                     <h2 className='font-medium text-xl'>Create a new workspace</h2>
                     <h2 className='text-sm mt-2'>This is a shared space where you can collaborate wth your team.
