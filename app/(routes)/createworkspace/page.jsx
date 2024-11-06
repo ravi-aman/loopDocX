@@ -22,9 +22,7 @@ function CreateWorkspace() {
     const [loading, setLoading] = useState(false);
     const router = useRouter();
 
-    /**
-     * Used to create new workspace and save data in database
-     */
+    
     const OnCreateWorkspace = async () => {
         setLoading(true);
         const workspaceId = Date.now();
