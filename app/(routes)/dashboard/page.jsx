@@ -9,9 +9,7 @@ function Dashboard() {
   
   return (
     <div>
-     
       <Header/>
-
       <WorkspaceList/>
     </div>
   )
