@@ -18,9 +18,7 @@ function DocumentInfo({params}) {
         params&&GetDocumentInfo();
     },[params])
 
-    /**
-     * Used to get document info
-     */
+    
     const GetDocumentInfo=async()=>{
         const docRef=doc(db,'workspaceDocuments',params?.documentid);
         const docSnap=await getDoc(docRef);

@@ -21,14 +21,13 @@ function CreateWorkspace() {
     const { orgId } = useAuth();
     const [loading, setLoading] = useState(false);
     const router = useRouter();
-
     
     const OnCreateWorkspace = async () => {
         setLoading(true);
         const workspaceId = Date.now();
         const result = await setDoc(doc(db, 'Workspace', workspaceId.toString()), {
             workspaceName: workspaceName,
-            emoji: emoji,
+            emoji: emoji||null,
             coverImage: coverImage,
             createdBy: user?.primaryEmailAddress?.emailAddress,
             id: workspaceId,
@@ -45,15 +44,12 @@ function CreateWorkspace() {
             documentName: 'Untitled Document',
             documentOutput: []
         })
-
         await setDoc(doc(db, 'documentOutput', docId.toString()), {
             docId: docId,
             output: []
         })
-
         setLoading(false);
         router.replace('/workspace/' + workspaceId + "/" + docId);
-
     }
     return (
         <div className='p-10 md:px-36 lg:px-64 xl:px-96 py-28'>
