@@ -1,6 +1,6 @@
 "use client"
 
-import CoverPicker from '@/app/_components/CoverPicker'
+import CoverPicker from '@/app/_components/CoverPicker';
 import EmojiPickerComponent from '@/app/_components/EmojiPickerComponent';
 import { db } from '@/config/firebaseConfig';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
@@ -54,7 +54,7 @@ function DocumentInfo({params}) {
                     justify-center  '>Change Cover</h2>
                     <div className='group-hover:opacity-40'>
                         <Image src={coverImage} width={400} height={400}
-                        className='w-full h-[200px] object-cover '
+                        className='w-full h-[200px] object-cover ' alt="Document cover image"
                         />
                     </div>
                 </div>

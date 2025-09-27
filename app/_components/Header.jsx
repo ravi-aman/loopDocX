@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Logo from './Logo'
 
 function Header() {
@@ -29,19 +30,19 @@ function Header() {
                     <div className="text-gray-600 dark:text-gray-300 lg:pr-4 lg:w-auto w-full lg:pt-0">
                         <ul className="tracking-wide font-medium lg:text-sm flex-col flex lg:flex-row gap-6 lg:gap-0">
                             <li>
-                                <a href="/" className="block md:px-4 transition hover:text-primary">
+                                <Link href="/" className="block md:px-4 transition hover:text-primary">
                                     <span>Features</span>
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/" className="block md:px-4 transition hover:text-primary">
+                                <Link href="/" className="block md:px-4 transition hover:text-primary">
                                     <span>Solution</span>
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/" className="block md:px-4 transition hover:text-primary">
+                                <Link href="/" className="block md:px-4 transition hover:text-primary">
                                     <span>Testimonials</span>
-                                </a>
+                                </Link>
                             </li>
                             <li>
                                 <a href="#" className="block md:px-4 transition hover:text-primary">

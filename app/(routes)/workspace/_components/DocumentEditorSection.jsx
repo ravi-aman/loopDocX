@@ -24,7 +24,11 @@ function DocumentEditorSection({ params }) {
       <div className='fixed right-10 bottom-10 '>
         <Button onClick={() => setOpenComment(!openComment)}>
           {openComment ? <X /> : <MessageCircle />} </Button>
-        {openComment && <CommentBox />}
+        {openComment && (
+          <React.Suspense fallback={<div className='w-[300px] h-[350px] shadow-lg rounded-lg p-4'>Loading comments...</div>}>
+            <CommentBox />
+          </React.Suspense>
+        )}
       </div>
     
     </div>

@@ -19,7 +19,7 @@ function WorkspaceItemList({ workspaceList }) {
                     onClick={() => OnClickWorkspaceItem(workspace.id)}
                 >
                     <Image src={workspace?.coverImage}
-                        width={400} height={200} alt='cover'
+                        width={400} height={200} alt={`${workspace?.workspaceName} workspace cover`}
                         className='h-[150px] object-cover rounded-t-xl'
                     />
                     <div className='p-4 rounded-b-xl'>

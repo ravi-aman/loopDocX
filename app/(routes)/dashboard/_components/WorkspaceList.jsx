@@ -53,7 +53,7 @@ function WorkspaceList() {
         {workspaceList?.length==0?
         <div className='flex flex-col justify-center items-center my-10'>
             <Image src={'/workspace.png'} 
-            width={200} height={200} alt='workspace' />
+            width={200} height={200} alt='Create new workspace' />
 
             <h2>Create a new workspace</h2>
 

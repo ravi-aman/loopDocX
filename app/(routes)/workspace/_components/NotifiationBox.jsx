@@ -15,8 +15,12 @@ function NotifiationBox({children}) {
     const updateRoomNotificationSettings=useUpdateRoomNotificationSettings();
     const { count, error, isLoading } = useUnreadInboxNotificationsCount();
     useEffect(()=>{
-        updateRoomNotificationSettings({threads:'all'})
-        console.log(count)
+        try {
+            updateRoomNotificationSettings({threads:'all'})
+            console.log(count)
+        } catch (error) {
+            console.log('Notification settings update failed - feature may not be available:', error.message);
+        }
     },[count])
   
     return (
